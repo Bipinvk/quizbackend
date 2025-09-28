@@ -137,7 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS Settings
 CORS_ALLOWED_ORIGINS = [
      "http://localhost:3000",
-     "https://quizapp-opal-ten.vercel.app"      
+     "https://quizapp-nine-drab.vercel.app"      
     # Add Vercel URL later
 ]
 CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT']
