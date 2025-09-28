@@ -85,18 +85,14 @@ WSGI_APPLICATION = 'quizbackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# For Supabase, better to use dj_database_url if complex, but parse manually or use:
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'postgres'),
-        'USER': os.getenv('DB_USER', 'postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'JUJI@47'),  # or keep in .env
-        'HOST': os.getenv('DB_HOST', 'db.cajwodbtgwdwgmhbejrx.supabase.co'),
-        'PORT': os.getenv('DB_PORT', '5432'),
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=0,  # For pooler compatibility
+        conn_health_checks=True,
+    )
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
