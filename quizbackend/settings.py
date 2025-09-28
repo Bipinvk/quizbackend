@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-^)*!byp%53=hz882tvf(c1bas$=z_p6gii5f=#*&%kv2tch469
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['quizbackend-xxmv.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
